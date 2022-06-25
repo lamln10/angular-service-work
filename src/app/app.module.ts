@@ -7,6 +7,9 @@ import { environment } from '../environments/environment';
 import {ToastrModule} from "ngx-toastr";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {CommonModule} from "@angular/common";
+import {AppRoutingModule} from "./app.routing.module";
+import {HttpClientModule} from "@angular/common/http";
+import {HomeService} from "./core/services/home.service";
 
 @NgModule({
   declarations: [
@@ -22,8 +25,11 @@ import {CommonModule} from "@angular/common";
       positionClass: 'toast-bottom-right',
       preventDuplicates: true,
     }),
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
