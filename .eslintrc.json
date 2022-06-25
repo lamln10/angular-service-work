@@ -1,0 +1,66 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "projects/**/*"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "parserOptions": {
+        "project": [
+          "tsconfig.json"
+        ],
+        "createDefaultProgram": true
+      },
+      "extends": [
+        "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended"
+      ],
+      "rules": {
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "prefix": "app",
+            "style": "camelCase"
+          }
+        ],
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "app",
+            "style": "kebab-case"
+          }
+        ],
+        // use '' instead of ""
+        "quotes": ["error", "single"],
+        // require ; end line
+        "semi": ["error", "always"],
+        // use camlcase for variable name
+        "camelcase": ["error"],
+        "default-case": ["error"],
+        "default-case-last": ["error"],
+        "eqeqeq": ["error", "always"],
+        "no-var": ["error"],
+        "prefer-const": ["error"],
+        "indent": ["error", 2],
+        "key-spacing": ["error", { "beforeColon": false }],
+        "keyword-spacing": ["error", { "before": true, "after": true }]
+      }
+    },
+    {
+      "files": [
+        "*.html"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended"
+      ],
+      "rules": {}
+    }
+  ]
+}

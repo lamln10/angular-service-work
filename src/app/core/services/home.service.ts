@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
-import {BehaviorSubject, Observable, of, Subject} from "rxjs";
-import {HomeV2Service} from "./home-v2.service";
+import {BehaviorSubject, Observable, of} from 'rxjs';
 
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root'
 })
 
 export class HomeService {
@@ -11,7 +10,7 @@ export class HomeService {
   count$ = new BehaviorSubject<number>(1);
   constructor(
   ) {
-    console.error(`constructor HomeService`)
+    console.error('constructor HomeService');
   }
 
   getTitle(): Observable<string> {
