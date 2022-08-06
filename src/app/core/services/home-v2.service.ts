@@ -6,7 +6,7 @@ import {BehaviorSubject, Observable, of} from 'rxjs';
 })
 
 export class HomeV2Service {
-  count$ = new BehaviorSubject<number>(1);
+  count$ = new BehaviorSubject<number>(110);
   constructor(
   ) {
     console.error('constructor HomeService v2');

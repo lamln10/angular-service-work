@@ -50,7 +50,10 @@
         "prefer-const": ["error"],
         "indent": ["error", 2],
         "key-spacing": ["error", { "beforeColon": false }],
-        "keyword-spacing": ["error", { "before": true, "after": true }]
+        "keyword-spacing": ["error", { "before": true, "after": true }],
+        "no-empty-function": "off",
+        "@typescript-eslint/no-empty-function": ["off"],
+        "@angular-eslint/no-empty-lifecycle-method": "off"
       }
     },
     {
