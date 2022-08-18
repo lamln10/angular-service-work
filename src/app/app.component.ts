@@ -19,6 +19,7 @@ export class AppComponent implements OnInit{
   }
 
   ngOnInit() {
+    console.log('app.component init');
     this.homeService.count$.subscribe(res => {
       this.count = res;
     });
